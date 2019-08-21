@@ -24,8 +24,12 @@ html
                 li 
                     a( href="/tecnologia" ) Tecnologia         
             main
-                div.container  This is Jade     
+                div.container Datos JSON     
                 img( src="./images/happy.gif" )
+                ul
+                    //-- li #{data}
+                    for user in data
+                        li #{ user .firstName }
         //-- comment 
             footer
                 div.footer
