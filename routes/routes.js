@@ -10,6 +10,8 @@ const appRouter = ( app, fs ) => {
                 throw err;
             }
 
+            console .log( ' >>> ', JSON .parse( data ) );
+
             //response .send( JSON .parse( data ) );
             response .render( 'home', {                     // nombre del archivo .jade (Ver linea 8)
                 data: JSON .parse( data ),

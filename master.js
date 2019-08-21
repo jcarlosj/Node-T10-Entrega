@@ -18,4 +18,7 @@ app .use( bodyParser .urlencoded({ extended: true }) );
 /** Importa Rutas */
 const routes = require( './routes/routes.js' )( app, fs );
 
-app .listen( 8081 );
+/** Ejecuta servidor, puerto 8081 */ 
+const server = app .listen( 8081, () => {
+    console .log( 'Escuchando en el puerto %s...', server .address() .port );
+});
